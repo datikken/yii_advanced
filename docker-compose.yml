@@ -36,3 +36,16 @@ services:
   #    - POSTGRES_DB=yii2advanced
   #    - POSTGRES_USER=yii2advanced
   #    - POSTGRES_PASSWORD=secret
+
+
+  #server: mysql
+  #username: yii2advanced
+  #password: secret
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
